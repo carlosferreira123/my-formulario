@@ -15,7 +15,7 @@ const Content = styled.div `
  display: flex;
  justify-content: center;
  box-shadow: 0 1px 2px;
- padding: 30 0px;
+ padding: 30px;
 `;
 
 const Row = styled.div`
