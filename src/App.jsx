@@ -43,7 +43,7 @@ const Button = styled.button`
 function App() {
   
   const initialValues = {
-    name:"",
+    nome:"",
     sobrenome:"",
     dataNascimento:"",
     naturalidade:"",
@@ -54,12 +54,14 @@ function App() {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string()
+    nome: Yup.string()
     .min(3, "O campo deve ter no minimo 3 caracteres")
-    .required("Campo obnrigatorio"),
-    sobrenome: Yup.string().required("Camopo obrigatório"),
-    email: Yup.string().email("E-mail inválido").
-    required("Campo obrigatorio"),
+    .required("Campo obrigatorio"),
+    sobrenome: Yup.string()
+    .required("Campo obrigatório"),
+    email: Yup.string()
+    .email("E-mail inválido")
+    .required("Campo obrigatorio"),
     dataNascimento: Yup.date()
       .max(new Date(), "Não é possivel incluir uma data futura")
       .required("Campo obrigatorio"),
@@ -99,7 +101,7 @@ function App() {
               required
               />
               
-              <Input name="Naturalidade" required/>
+              <Input name="naturalidade" required/>
 
             </Row>
 
